@@ -1,10 +1,27 @@
-@mixin hide-text {
-  overflow: hidden;
+/// Generates variables for all buttons. Please note that you must use interpolation on the variable: <code>#{$all-buttons}</code>.
+///
+/// @group Add-ons
+///
+/// @example scss - Usage
+///   .logo {
+///     @include hide-text;
+///   }
+///
+/// @example css - CSS Output
+///   .logo {
+///     text-indent: 101%;
+///     overflow: hidden;
+///     white-space: nowrap;
+///   }
+///
+/// Remove height argument in Bourbon v5.0.0
 
-  &:before {
-    content: "";
-    display: block;
-    width: 0;
-    height: 100%;
+@mixin hide-text($height: null) {
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+
+  @if $height {
+    @warn "The `hide-text` mixin has changed and no longer requires a height. The height argument will not be accepted in Bourbon v5.0.0";
   }
 }
