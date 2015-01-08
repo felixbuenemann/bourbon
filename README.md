@@ -1,11 +1,9 @@
-[![Bourbon Sass Mixin Library](http://images.thoughtbot.com/bourbon/bourbon-logo.svg)](http://bourbon.io)
+[![Bourbon](http://images.thoughtbot.com/bourbon/bourbon-logo.svg)](http://bourbon.io)
 
 [![Gem Version](http://img.shields.io/gem/v/bourbon.svg?style=flat)](https://rubygems.org/gems/bourbon)
 [![Code Climate](http://img.shields.io/codeclimate/github/thoughtbot/bourbon.svg?style=flat)](https://codeclimate.com/github/thoughtbot/bourbon)
 [![Gitter chat](https://img.shields.io/badge/gitter-thoughtbot/bourbon-ae3dd2.svg?style=flat)](https://gitter.im/thoughtbot/bourbon)
 [![Stack Overflow](http://img.shields.io/badge/stack%20overflow-bourbon-ae3dd2.svg?style=flat)](http://stackoverflow.com/questions/tagged/bourbon)
-
-***
 
 ## A simple and lightweight mixin library for Sass.
 
@@ -13,26 +11,26 @@ Bourbon is a library of pure Sass mixins that are designed to be simple and easy
 
 The mixins contain vendor specific prefixes for all CSS3 properties for support amongst modern browsers. The prefixes also ensure graceful degradation for older browsers that support only CSS3 prefixed properties. Bourbon uses SCSS syntax.
 
-#### [Documentation & Demo](http://bourbon.io)
-
-#### [Changelog](https://github.com/thoughtbot/bourbon/releases)
+- **[Documentation](http://bourbon.io/docs)**
+- **[Changelog](https://github.com/thoughtbot/bourbon/releases)**
+- **[Issues & Bugs](https://github.com/thoughtbot/bourbon/issues)**
 
 ## Requirements
 
 - [Sass](https://github.com/sass/sass) 3.3+
-- :warning: If you are using Bourbon with **LibSass**, **sass-rails**, **Compass**, **Foundation** or need **Sass 3.2 support**, you should [use Bourbon 3.2.x](#installing-older-versions-of-bourbon).
+- :warning: If you are using **LibSass**, you need to [use Bourbon 3.2.3](#installing-older-versions-of-bourbon).
 
 ## Installation
 
-Bourbon uses the [RubyGems](https://rubygems.org) package manager to easily generate a `bourbon` directory with all of the necessary files.
+For command line help, visit our wiki page on Bourbon’s [command line interface](https://github.com/thoughtbot/bourbon/wiki/Command-Line-Interface).
 
-For command line help, use `bourbon help` or visit the [Command Line Interface Wiki](https://github.com/thoughtbot/bourbon/wiki/Command-Line-Interface).
-
-1. Install the Bourbon gem:
+1. Install the Bourbon gem using the [RubyGems](https://rubygems.org) package manager:
 
   ```bash
   gem install bourbon
   ```
+
+  Alternatively, you can install Bourbon with [Bower](http://bower.io).
 
 2. Install the Bourbon library into the current directory:
 
@@ -40,7 +38,7 @@ For command line help, use `bourbon help` or visit the [Command Line Interface W
   bourbon install
   ```
 
-  **Pro Tip:** You can specify a target directory using the `path` flag:
+  **Pro Tip:** You can target installation into a specific directory using the `path` flag:
 
   ```bash
   bourbon install --path my/custom/path/
@@ -68,19 +66,19 @@ For command line help, use `bourbon help` or visit the [Command Line Interface W
   bundle install
   ```
 
-3. Restart your server and rename `application.css` to `application.css.scss`:
+3. Restart your server and rename `application.css` to `application.scss`:
 
   ```bash
-  mv app/assets/stylesheets/application.css app/assets/stylesheets/application.css.scss
+  mv app/assets/stylesheets/application.css app/assets/stylesheets/application.scss
   ```
 
-4. Delete the sprocket directive in `application.css.scss` ([why?](https://github.com/thoughtbot/bourbon/wiki/Rails-Sprockets)):
+4. Delete the Sprockets directive in `application.scss`:
 
   ```scss
   *= require_tree .
   ```
 
-5. Import Bourbon at the beginning of `application.css.scss`. All additional stylesheets should be imported below Bourbon:
+5. Import Bourbon at the beginning of `application.scss`. All additional stylesheets should be imported below Bourbon:
 
   ```scss
   @import "bourbon";
@@ -106,17 +104,6 @@ For command line help, use `bourbon help` or visit the [Command Line Interface W
 
 3. Follow the [instructions above](#installation) to install Bourbon into your project.
 
-## Command line interface
-
-```bash
-bourbon help
-bourbon install
-bourbon update
-bourbon version
-```
-
-More information can be found in the [wiki](https://github.com/thoughtbot/bourbon/wiki/Command-Line-Interface).
-
 ## Browser support
 
 - Chrome 10.0+
@@ -127,17 +114,19 @@ More information can be found in the [wiki](https://github.com/thoughtbot/bourbo
 
 ## The Bourbon family
 
-- [Bourbon](http://bourbon.io): A simple and lightweight mixin library for Sass
-- [Neat](http://neat.bourbon.io): A lightweight semantic grid framework for Sass and Bourbon
-- [Bitters](http://bitters.bourbon.io): Scaffold styles, variables and structure for Bourbon projects
-- [Refills](http://refills.bourbon.io): Prepackaged patterns and components, built on top of Bourbon, Bitters & Neat
+- [Bourbon](https://github.com/thoughtbot/bourbon): A simple and lightweight mixin library for Sass
+- [Neat](https://github.com/thoughtbot/neat): A lightweight semantic grid framework for Sass and Bourbon
+- [Bitters](https://github.com/thoughtbot/bitters): Scaffold styles, variables and structure for Bourbon projects
+- [Refills](https://github.com/thoughtbot/refills): Prepackaged patterns and components built with Bourbon, Neat and Bitters
+
+Also check out [Proteus](https://github.com/thoughtbot/proteus), a collection of useful starter kits to help you prototype faster. Each kit comes with Bourbon, Neat and Bitters out-of-the-box.
 
 ## Credits
 
-![thoughtbot](http://thoughtbot.com/images/tm/logo.png)
+[![thoughtbot](http://images.thoughtbot.com/bourbon/thoughtbot-logo.svg)](http://thoughtbot.com)
 
 Bourbon is maintained and funded by [thoughtbot, inc](http://thoughtbot.com). Tweet your questions or suggestions to [@bourbonsass](https://twitter.com/bourbonsass) and while you’re at it follow us too.
 
 ## License
 
-Copyright © 2011–2014 [thoughtbot, inc](http://thoughtbot.com). Bourbon is free software, and may be redistributed under the terms specified in the [license](LICENSE.md).
+Copyright © 2011–2015 [thoughtbot, inc](http://thoughtbot.com). Bourbon is free software, and may be redistributed under the terms specified in the [license](LICENSE.md).
