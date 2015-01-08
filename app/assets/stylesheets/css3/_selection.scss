@@ -1,14 +1,40 @@
-@mixin selection {
-  $before-colons: "";
+/// Outputs the spec and prefixed versions of the selection pseudo-element.
+///
+/// @param {Bool} $current-selector (false)
+///   If set to `true`, it takes the current element into consideration.
+///
+/// @example scss - Usage
+///   .element {
+///     @include selection(true) {
+///       background: red;
+///    }
+///  }
+///
+/// @example css - CSS Output
+///   .element::selection {
+///     background: red;
+///   }
+///
+///   .element::-moz-selection {
+///     background: red;
+///   }
 
-  @if & {
-    $before-colons: "&"
-  }
+@mixin selection($current-selector: false) {
+  @if $current-selector {
+    &::selection {
+      @content;
+    }
 
-  #{$before-colons}::selection {
-    @content;
-  }
-  #{$before-colons}::-moz-selection {
-    @content;
+    &::-moz-selection {
+      @content;
+    }
+  } @else {
+    ::selection {
+      @content;
+    }
+
+    ::-moz-selection {
+      @content;
+    }
   }
 }
