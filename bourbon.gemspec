@@ -28,5 +28,7 @@ meaning they should be as close to the original CSS syntax as possible.
   s.add_dependency('thor')
 
   s.add_development_dependency('aruba', '~> 0.4')
-  s.add_development_dependency('rake')
+  s.add_development_dependency('rake') 
+  s.add_development_dependency('rspec', '~> 2.14.1')
+  s.add_development_dependency('css_parser')
 end
