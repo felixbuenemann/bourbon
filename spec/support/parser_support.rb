@@ -4,7 +4,7 @@ module ParserSupport
   end
 
   def self.parse_file(identifier)
-    self.parser.load_file!("tmp/#{identifier}.css")
+    parser.load_file!("tmp/#{identifier}.css")
   end
 
   def self.show_contents(identifier)

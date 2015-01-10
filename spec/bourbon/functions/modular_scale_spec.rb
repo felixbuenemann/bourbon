@@ -1,8 +1,8 @@
-require "spec_helper";
+require "spec_helper"
 
 describe "modular-scale" do
   before(:all) do
-    ParserSupport.parse_file('functions/modular-scale')
+    ParserSupport.parse_file("functions/modular-scale")
   end
 
   context "called with arguments (1, $value: 2em)" do
